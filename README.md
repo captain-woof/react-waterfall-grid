@@ -8,12 +8,12 @@
 
 
 ### Table of Contents 📝
-- **[Introduction](#introduction)**
-- **[Installing](#installing)**
-- **[Quick Example](#quick-example)**
-- **[All Grids](#all-grids)**
-- **[Props](#props)**
-- **[FAQ](#faq)**
+- **[Introduction](#introduction-)**
+- **[Installing](#installing-)**
+- **[Quick Example](#quick-example-)**
+- **[All Grids](#all-grids-)**
+- **[Props](#props-)**
+- **[FAQ](#faq-)**
 - **[Author](#author-)**
 
 ### Introduction 💡
@@ -154,7 +154,7 @@ Props to pass to each grid column - flexbox `div` for non-animated Grid containe
 
 Props to pass to the `<AnimatePresence>` container which encapsulates the actual grid container.
 
-### FAQ
+### FAQ 🤔
 
 - **Sometimes, on some grid container sizes, one of the columns (or rows) get bigger than the rest. Why's that?**
 
