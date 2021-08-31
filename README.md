@@ -8,13 +8,13 @@
 
 
 ### Table of Contents 📝
-- **[Introduction](#introduction)**
+- **[Introduction](#introduction 💡)**
 - **[Installing](#installing)**
 - **[Quick Example](#quick-example)**
 - **[All Grids](#all-grids)**
 - **[Props](#props)**
 - **[FAQ](#faq)**
-- **[Author](#author)**
+- **[Author](#author 👊)**
 
 ### Introduction 💡
 
