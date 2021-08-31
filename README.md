@@ -7,7 +7,7 @@
 </p>
 
 
-### Table of Contents
+### Table of Contents 📝
 - **[Introduction](#introduction)**
 - **[Installing](#installing)**
 - **[Quick Example](#quick-example)**
@@ -16,7 +16,7 @@
 - **[FAQ](#faq)**
 - **[Author](#author)**
 
-### Introduction
+### Introduction 💡
 
 https://user-images.githubusercontent.com/72122026/131544680-03955981-227c-4320-9a7f-5297b3d3fa31.mp4
 
@@ -26,13 +26,13 @@ https://user-images.githubusercontent.com/72122026/131544680-03955981-227c-4320-
 
 See this for a **[live demo](https://sohail-saha.in/react-waterfall-grid/).**
 
-### Installing
+### Installing ⏳
 
 `npm install --save react-waterfall-grid`
 
 ...and you're good to go!
 
-### Quick Example
+### Quick Example 🏎
 
 Here's a small example to get you started.
 **Take note** of how the array of (one-dimensional) elements is passed to the grid through a prop. Yes, you pass all your stuff only once!
@@ -76,7 +76,7 @@ export default function App() {
 }
 ```
 
-### All Grids
+### All Grids 🔭
 
 With `react-waterfall-grid`, you get access to four different grid containers - 
 - **`WaterfallGrid`** and its animated counterpart **`WaterfallGridAnimated`**.
@@ -92,7 +92,7 @@ Based on this, and whether the container is animated or not, **there are differe
 
 Lastly, **`react-waterfall-grid` uses flexbox at its core**, so to customize styles for the grid container as a whole or the grid columns (or rows, for horizontal grids), **pass in the style with the appropriate prop just like you would for a native flexbox container.**
 
-### Props
+### Props 😏
 
 #### **styleGridContainer**
 
@@ -169,6 +169,6 @@ Props to pass to the `<AnimatePresence>` container which encapsulates the actual
 
     *Why not? **This package is MIT licensed**. Do anything you wish to with it, with one condition that you come back and tell me about it.*
     
-### Author
+### Author 👊
 
 MIT © [Sohail Saha *(aka Captain Woof)*](https://sohail-saha.in/)
