@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "./static/css/main.cf339135.chunk.css",
+    "main.js": "./static/js/main.55fd0772.chunk.js",
+    "main.js.map": "./static/js/main.55fd0772.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.66ff1409.js",
+    "runtime-main.js.map": "./static/js/runtime-main.66ff1409.js.map",
+    "static/js/2.cb7766e6.chunk.js": "./static/js/2.cb7766e6.chunk.js",
+    "static/js/2.cb7766e6.chunk.js.map": "./static/js/2.cb7766e6.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.067085c993c944de4844584bfbfa3a77.js": "./precache-manifest.067085c993c944de4844584bfbfa3a77.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/main.cf339135.chunk.css.map": "./static/css/main.cf339135.chunk.css.map",
+    "static/js/2.cb7766e6.chunk.js.LICENSE.txt": "./static/js/2.cb7766e6.chunk.js.LICENSE.txt",
+    "static/media/1.jpg": "./static/media/1.dd25978e.jpg",
+    "static/media/10.jpg": "./static/media/10.0766338a.jpg",
+    "static/media/12.jpg": "./static/media/12.ecaf7c7b.jpg",
+    "static/media/13.jpg": "./static/media/13.f8b7ec99.jpg",
+    "static/media/14.jpg": "./static/media/14.b6ee9ad3.jpg",
+    "static/media/15.jpg": "./static/media/15.9673eab2.jpg",
+    "static/media/16.jpg": "./static/media/16.0ffba1ac.jpg",
+    "static/media/17.jpg": "./static/media/17.674f3fa6.jpg",
+    "static/media/18.jpg": "./static/media/18.b0e3474b.jpg",
+    "static/media/19.jpg": "./static/media/19.f204cb3c.jpg",
+    "static/media/2.jpg": "./static/media/2.096a73f1.jpg",
+    "static/media/20.jpg": "./static/media/20.1b52f202.jpg",
+    "static/media/3.jpg": "./static/media/3.6e4badca.jpg",
+    "static/media/4.jpg": "./static/media/4.751030a3.jpg",
+    "static/media/5.jpg": "./static/media/5.79b80279.jpg",
+    "static/media/6.jpg": "./static/media/6.637662d3.jpg",
+    "static/media/7.jpg": "./static/media/7.4903d39e.jpg",
+    "static/media/8.jpg": "./static/media/8.e4506d69.jpg",
+    "static/media/9.jpg": "./static/media/9.85882db5.jpg",
+    "static/media/index.css": "./static/media/intellecta.188ee775.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.66ff1409.js",
+    "static/js/2.cb7766e6.chunk.js",
+    "static/css/main.cf339135.chunk.css",
+    "static/js/main.55fd0772.chunk.js"
+  ]
+}
