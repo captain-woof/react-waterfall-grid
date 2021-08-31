@@ -22,7 +22,7 @@ https://user-images.githubusercontent.com/72122026/131544680-03955981-227c-4320-
 
 **[React Waterfall Grid](https://www.npmjs.com/package/react-waterfall-grid)** is a library of fully responsive, animated and customizable waterfall grids (vertical and horizontal). **All it needs is an array of your elements, and it handles the rest out-of-the-box.**
 
-**At its core, `react-waterfall-grid` uses flexbox to place items correctly.** So, all the possible props that you can pass to the Grid components [(see 'All Grids')](#all-grids) are the same as what you would pass to flexbox. The below [example](#usage-example) will show you how it's done.
+**At its core, `react-waterfall-grid` uses flexbox to place items correctly.** So, all the possible props that you can pass to the Grid components [(see 'All Grids')](#all-grids-) are the same as what you would pass to flexbox. The below [example](#usage-example-) will show you how it's done.
 
 See this for a **[live demo](https://sohail-saha.in/react-waterfall-grid/).**
 
@@ -88,7 +88,7 @@ As you might have guessed, `WaterfallGrid` and `WaterfallGridAnimated` are named
 
 The **vertical grids will only accept child elements with a fixed width** but any height. (to keep the elements' layout changes constrained), whereas the **horizontal grids will only accept child elements with a fixed height** but any width.
 
-Based on this, and whether the container is animated or not, **there are different props, some common to all, and the rest are specific to a specific set of containers.** *[Read the next section](#props)* to get a list of props and the grids they can be used on.
+Based on this, and whether the container is animated or not, **there are different props, some common to all, and the rest are specific to a specific set of containers.** *[Read the next section](#props-)* to get a list of props and the grids they can be used on.
 
 Lastly, **`react-waterfall-grid` uses flexbox at its core**, so to customize styles for the grid container as a whole or the grid columns (or rows, for horizontal grids), **pass in the style with the appropriate prop just like you would for a native flexbox container.**
 
