@@ -1,15 +1,20 @@
 {
-  "short_name": "react-waterfall-grid",
-  "name": "react-waterfall-grid",
+  "short_name": "React Waterfall Grid Demo",
+  "name": "React Waterfall Grid Demo",
   "icons": [
     {
       "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#333333",
   "background_color": "#ffffff"
 }
