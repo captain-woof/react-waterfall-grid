@@ -1,5 +1,5 @@
-This example was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# README
 
-It is linked to the react-waterfall-grid package in the parent directory for development purposes.
+This is a demo of `react-waterfall-grid`'s `WaterfallGridAnimated` component.
 
-You can run `yarn install` and then `yarn start` to test your package.
+It is fully responsive right out-of-the-box (check the source code). Try resizing it!

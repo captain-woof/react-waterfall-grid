@@ -1,6 +1,11 @@
-import React from 'react'
-import styles from './styles.module.css'
+import WaterfallGrid from './components/WaterfallGrid'
+import WaterfallGridAnimated from './components/WaterfallGridAnimated'
+import WaterfallHorizontalGrid from './components/WaterfallHorizontalGrid'
+import WaterfallHorizontalGridAnimated from './components/WaterfallHorizontalGridAnimated'
 
-export const ExampleComponent = ({ text }) => {
-  return <div className={styles.test}>Example Component: {text}</div>
+export {
+  WaterfallGrid,
+  WaterfallGridAnimated,
+  WaterfallHorizontalGrid,
+  WaterfallHorizontalGridAnimated
 }
