@@ -1,9 +1,47 @@
 export default class ReshapeMatrix {
-  constructor(elementsArr) {
-    this.elementsArr = elementsArr
+  constructor(elementsArr, whatToPrioritise) {
+    this.elementsArr = elementsArr || []
     this.maxRows = 1
-    this.maxColumns = elementsArr.length
-    this.elementsArrSize = elementsArr.length
+    this.maxColumns = this.elementsArr.length
+    this.elementsArrSize = this.elementsArr.length
+    this.whatToPrioritise = whatToPrioritise || 1 // This shows what (0-Row,1-Col) to keep constant during 'adjust()'
+  }
+
+  changeWhatToPrioritise(newWhatToPrioritise) {
+    if ((newWhatToPrioritise === 0) || (newWhatToPrioritise === 1)) {
+      this.whatToPrioritise = newWhatToPrioritise
+    } else {
+      return false
+    }
+  }
+
+  getAll() {
+    return this.elementsArr
+  }
+
+  adjust() {
+    if (this.whatToPrioritise === 1) { // If columns have priority
+      this.maxRows = Math.floor(this.elementsArr.length / this.maxColumns) +
+        (Boolean(this.elementsArr.length % this.maxColumns) ? 1 : 0)
+    } else {
+      this.maxColumns = Math.floor(this.elementsArr.length / this.maxRows) +
+        (Boolean(this.elementsArr.length % this.maxRows) ? 1 : 0)
+    }
+  }
+
+  replaceAllByElems(newElems) {
+    this.elementsArr = newElems
+    this.adjust()
+  }
+
+  append(newElements) {
+    this.elementsArr.concat(newElements)
+    this.adjust()
+  }
+
+  deleteEle(elementToDelete) {
+    this.elementsArr.splice(this.elementsArr.indexOf(elementToDelete), 1)
+    this.adjust()
   }
 
   reshape(newMaxRows, newMaxColumns) {
@@ -21,17 +59,13 @@ export default class ReshapeMatrix {
 
   reshapeWithCols(newMaxColumns) {
     this.maxColumns = newMaxColumns
-    this.maxRows =
-      Math.floor(this.elementsArrSize / newMaxColumns) +
-      (this.elementsArrSize % newMaxColumns)
+    this.adjust()
     return true
   }
 
   reshapeWithRows(newMaxRows) {
     this.maxRows = newMaxRows
-    this.maxColumns =
-      Math.floor(this.elementsArrSize / newMaxRows) +
-      (this.elementsArrSize % newMaxRows)
+    this.adjust()
     return true
   }
 

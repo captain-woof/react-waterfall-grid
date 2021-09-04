@@ -1,6 +1,6 @@
 {
   "name": "react-waterfall-grid",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "React Waterfall Grid is a library of fully responsive, animated and customizable waterfall grids (vertical and horizontal). All it needs is an array of your elements, and it handles the rest out-of-the-box.",
   "author": "captain-woof",
   "license": "MIT",
@@ -24,16 +24,16 @@
     "deploy": "gh-pages -d example/build -b gh-pages"
   },
   "peerDependencies": {
-    "react": "^16.0.0",
+    "react": "^17.0.2",
     "framer-motion": "^4.1.17",
-    "rc-resize-observer": "^1.0.0"
-    
+    "rc-resize-observer": "^1.0.0",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "microbundle-crl": "^0.13.10",
     "babel-eslint": "^10.0.3",
     "cross-env": "^7.0.2",
-    "eslint": "^6.8.0",
+    "eslint": "^7.11.0",
     "eslint-config-prettier": "^6.7.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-config-standard-react": "^9.2.0",
@@ -46,13 +46,14 @@
     "gh-pages": "^2.2.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.0.4",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "^3.4.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "^4.0.3",
     "framer-motion": "^4.1.17",
     "rc-resize-observer": "^1.0.0"
   },
   "files": [
-    "dist","README.md"
+    "dist",
+    "README.md"
   ]
 }
