@@ -1,6 +1,6 @@
 # React Waterfall Grid
 
-![npm](https://img.shields.io/npm/dm/react-waterfall-grid) ![Lines of code](https://img.shields.io/tokei/lines/github/captain-woof/react-waterfall-grid) ![NPM](https://img.shields.io/npm/l/react-waterfall-grid?color=orange)
+![npm](https://img.shields.io/npm/dm/react-waterfall-grid) ![npm bundle size](https://img.shields.io/bundlephobia/min/react-waterfall-grid) ![NPM](https://img.shields.io/npm/l/react-waterfall-grid?color=orange) ![npm](https://img.shields.io/npm/v/react-waterfall-grid?color=yellow)
 
 <p align="center">
   <img width="640" height="320" src="https://drive.google.com/uc?export=download&id=1k5jX04Czge3iGzHzasiT5SfHvX08CP8W">
