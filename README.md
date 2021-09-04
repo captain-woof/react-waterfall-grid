@@ -130,6 +130,8 @@ The height of each child element in the grid. **Must be a number** (would be use
 
 A one-directional array of containing all child elements. Make sure to give them unique keys. Any customization you want on the child must be done by you, the grid won't handle that, allowing full control on each child element as well.
 
+`childItems` can be a state as well, and updating this state will cause the Grid to re-render appropriately on its own, meaning, that you do not need to take care of the re-rendering yourself!
+
 #### **propsGridContainer**
 
 *Supported by all grids*
