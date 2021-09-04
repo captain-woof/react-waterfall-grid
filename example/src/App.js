@@ -31,10 +31,6 @@ const ParentContainer = styled.div`
   background-color: #121212;
 `
 
-const Image = styled(motion.img)`
-  object-fit: cover;
-`
-
 const OverlayAndTitleContainer = styled.div`
   height: 100%;
   width: 100%;
@@ -55,6 +51,9 @@ const Title = styled(motion.div)`
   font-size: 8vw;
   user-select: none;
   text-shadow: 4px 4px 2px #212121;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 `
 
 const Code = styled(motion.div)`
@@ -66,35 +65,30 @@ const Code = styled(motion.div)`
   border-bottom: 2px solid #F3F3F3;
   border-right: 2px solid #F3F3F3;
   user-select: all;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 `
 
 const ease = [0.65, 0, 0.35, 1]
 
-const imageVariants = {
+const getImageContainerVariants = () => ({
   initial: {
     opacity: 0,
-    y: 180
+    y: 120
   },
   animate: {
     opacity: 1,
     y: 0,
     transition: {
       ease: ease,
-      duration: 1.5
+      duration: 1.2,
+      delay: Math.random() * 2
     }
   }
-}
+})
 
-const containerVariants = {
-  animate: {
-    transition: {
-      staggerChildren: 0.6,
-      ease: ease
-    }
-  }
-}
-
-const titleAndCodeVariant = {
+const titleContainerVariant = {
   animate: {
     transition: {
       staggerChildren: 0.2
@@ -102,16 +96,22 @@ const titleAndCodeVariant = {
   }
 }
 
-const characterVariant = {
+const codeContainerVariant = {
+  animate: {
+    transition: {
+      staggerChildren: 0.15
+    }
+  }
+}
+
+const characterVariantTitle = {
   initial: {
-    y: 180,
+    y: 90,
     opacity: 0,
-    rotateZ: 60
   },
   animate: {
     y: 0,
     opacity: 1,
-    rotateZ: 0,
     transition: {
       ease: ease,
       duration: 0.7
@@ -119,30 +119,51 @@ const characterVariant = {
   }
 }
 
-export default function App(){
+const characterVariantCode = {
+  initial: {
+    opacity: 0,
+    scale: 1.1
+  },
+  animate: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      ease: "linear",
+      duration: 0.1
+    }
+  }
+}
+
+export default function App() {
   // Boolean - True if phone
   const isPhone = useMediaQuery({ query: 'max-width: 480px' })
 
   // List of images <img>
-  const imagesList = [Image6, Image7, Image8, Image9, Image10, Image11, Image12, Image13, Image14, Image15, Image16, Image17, Image18, Image19, Image20, Image4, Image1, Image2, Image3, Image5].map((imagePath) => (
-    <Image key={imagePath} style={{ width: (isPhone ? "200px" : "300px") }} src={imagePath} alt={imagePath}
-      variants={imageVariants} whileHover={{ scale: 1.05, transition: { ease: ease, duration: 0.8 } }} />
-  ))
+  const imagesList = [Image6, Image7, Image8, Image9, Image10, Image11, Image12, Image13, Image14, Image15, Image16, Image17, Image18, Image19, Image20, Image4, Image1, Image2, Image3, Image5]
+    .map((imagePath) => (
+      <motion.div key={imagePath} style={{ width: (isPhone ? "200px" : "300px") }}
+        variants={getImageContainerVariants()} animate="animate" initial="initial">
+        <img src={imagePath} alt={imagePath} style={{ objectFit: "cover", height: "100%", width: "inherit" }} />
+      </motion.div>
+    ))
 
   return (
     <ParentContainer id="parent-container">
       <WaterfallGridAnimated childItems={imagesList} childWidth={isPhone ? 200 : 300}
         styleGridContainer={{ width: "100%", position: "relative", justifyContent: "center", zIndex: 1 }}
-        propsGridColumn={{ variants: containerVariants, initial: "initial", animate: "animate" }} />
+        propsAnimatePresence={{ exitBeforeEnter: true }} />
       <OverlayAndTitleContainer>
-        <Title id="title" variants={titleAndCodeVariant} initial="initial" animate="animate" exit="exit">
+        <Title id="title" variants={titleContainerVariant} initial="initial" animate="animate" exit="exit">
           {"react-waterfall-grid".split("").map((character, index) => (
-            <motion.span key={index} variants={characterVariant}>{character}</motion.span>
+            <motion.div key={index} variants={characterVariantTitle}>{character}</motion.div>
           ))}
         </Title>
-        <Code id="code" variants={titleAndCodeVariant} initial="initial" animate="animate" exit="exit">
+        <Code id="code" variants={codeContainerVariant} initial="initial" animate="animate" exit="exit">
           {"npm install --save react-waterfall-grid".split("").map((character, index) => (
-            <motion.span key={index} variants={characterVariant}>{character}</motion.span>
+            (character === ' '
+              ? <motion.div key={index} variants={characterVariantCode}>&nbsp;</motion.div>
+              : <motion.div key={index} variants={characterVariantCode}>{character}</motion.div>
+            )
           ))}
         </Code>
       </OverlayAndTitleContainer>
