@@ -1,6 +1,6 @@
 /* eslint-disable react/react-in-jsx-scope */
 import styled from 'styled-components'
-import { WaterfallGridAnimated } from 'react-waterfall-grid'
+import { WaterfallGrid } from 'react-waterfall-grid'
 import { useMediaQuery } from 'react-responsive'
 import { motion } from 'framer-motion'
 import React from 'react'
@@ -149,9 +149,8 @@ export default function App() {
 
   return (
     <ParentContainer id="parent-container">
-      <WaterfallGridAnimated childItems={imagesList} childWidth={isPhone ? 200 : 300}
-        styleGridContainer={{ width: "100%", position: "relative", justifyContent: "center", zIndex: 1 }}
-        propsAnimatePresence={{ exitBeforeEnter: true }} />
+      <WaterfallGrid childItems={imagesList} childWidth={isPhone ? 200 : 300}
+        styleGridContainer={{ width: "100%", position: "relative", justifyContent: "center", zIndex: 1 }} />
       <OverlayAndTitleContainer>
         <Title id="title" variants={titleContainerVariant} initial="initial" animate="animate" exit="exit">
           {"react-waterfall-grid".split("").map((character, index) => (

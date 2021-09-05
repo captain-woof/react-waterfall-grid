@@ -20,7 +20,7 @@
 
 https://user-images.githubusercontent.com/72122026/131544680-03955981-227c-4320-9a7f-5297b3d3fa31.mp4
 
-**[React Waterfall Grid](https://www.npmjs.com/package/react-waterfall-grid)** is a library of fully responsive, animated and customizable waterfall grids (vertical and horizontal). **All it needs is an array of your elements, and it handles the rest out-of-the-box.**
+**[React Waterfall Grid](https://www.npmjs.com/package/react-waterfall-grid)** is a library of fully responsive and customizable waterfall grids (vertical and horizontal). **All it needs is an array of your elements, and it handles the rest out-of-the-box.**
 
 **At its core, `react-waterfall-grid` uses flexbox to place items correctly.** So, all the possible props that you can pass to the Grid components [(see 'All Grids')](#all-grids-) are the same as what you would pass to flexbox. The below [example](#usage-example-) will show you how it's done.
 
@@ -78,17 +78,15 @@ export default function App() {
 
 ### All Grids 🔭
 
-With `react-waterfall-grid`, you get access to four different grid containers - 
-- **`WaterfallGrid`** and its animated counterpart **`WaterfallGridAnimated`**.
-- **`WaterfallHorizontalGrid`** and its animated counterpart **`WaterfallHorizontalGridAnimated`**.
+With `react-waterfall-grid`, you get access to two different grid containers - 
+- **`WaterfallGrid`**
+- **`WaterfallHorizontalGrid`
 
-**The animated ones use `framer-motion` at its core**, and *allows full customization like you'd do with a native motion element.*
+As you might have guessed, `WaterfallGrid` is named so because the child contents *fall vertically*, while in `WaterfallHorizontalGrid` the child contents *'fall' horizontally.*
 
-As you might have guessed, `WaterfallGrid` and `WaterfallGridAnimated` are named so because the child contents *fall vertically*, while in `WaterfallHorizontalGrid` and `WaterfallHorizontalGridAnimated`, the child contents *'fall' horizontally.*
+The **vertical grid will only accept child elements with a fixed width** but any height. (to keep the elements' layout changes constrained), whereas the **horizontal grid will only accept child elements with a fixed height** but any width.
 
-The **vertical grids will only accept child elements with a fixed width** but any height. (to keep the elements' layout changes constrained), whereas the **horizontal grids will only accept child elements with a fixed height** but any width.
-
-Based on this, and whether the container is animated or not, **there are different props, some common to all, and the rest are specific to a specific set of containers.** *[Read the next section](#props-)* to get a list of props and the grids they can be used on.
+Based on this, **there are different props, some common to both Grids, and the rest are specific to a particular type of Grid.** *[Read the next section](#props-)* to get a list of props and the grids they can be used on.
 
 Lastly, **`react-waterfall-grid` uses flexbox at its core**, so to customize styles for the grid container as a whole or the grid columns (or rows, for horizontal grids), **pass in the style with the appropriate prop just like you would for a native flexbox container.**
 
@@ -96,37 +94,37 @@ Lastly, **`react-waterfall-grid` uses flexbox at its core**, so to customize sty
 
 #### **styleGridContainer**
 
-*Supported by all grids*
+*Supported by both grids*
 
 Takes an object, just like `style` on native React elements. Allows customization of the entire grid container. Use flexbox stylings.
 
 #### **styleGridColumn**
 
-*Supported by `WaterfallGrid` and `WaterfallGridAnimated`*
+*Supported by `WaterfallGrid`*
 
 Takes an object, just like `style` on native React elements. Allows customization of each grid column. Use flexbox stylings.
 
 #### **styleGridRow**
 
-*Supported by `WaterfallHorizontalGrid` and `WaterfallHorizontalGridAnimated`*
+*Supported by `WaterfallHorizontalGrid`*
 
 Takes an object, just like `style` on native React elements. Allows customization of each grid row. Use flexbox stylings.
 
 #### **childWidth**
 
-*Supported by `WaterfallGrid` and `WaterfallGridAnimated`*
+*Supported by `WaterfallGrid`*
 
 The width of each child element in the grid. **Must be a number** (would be used as pixels); *cannot be a string*. **This will remain constant.** The height is freely allowed to change.
 
 #### **childHeight**
 
-*Supported by `WaterfallHorizontalGrid` and `WaterfallHorizontalGridAnimated`*
+*Supported by `WaterfallHorizontalGrid`*
 
 The height of each child element in the grid. **Must be a number** (would be used as pixels); *cannot be a string*. **This will remain constant.** The width is freely allowed to change.
 
 #### **childItems**
 
-*Supported by all grids*
+*Supported by both grids*
 
 A one-directional array of containing all child elements. Make sure to give them unique keys. Any customization you want on the child must be done by you, the grid won't handle that, allowing full control on each child element as well.
 
@@ -134,27 +132,21 @@ A one-directional array of containing all child elements. Make sure to give them
 
 #### **propsGridContainer**
 
-*Supported by all grids*
+*Supported by both grids*
 
-Props to pass to the grid container - flexbox `div` for non-animated Grid containers and flexbox `motion.div` for animated ones.
+Props to pass to the grid container (flexbox `div`).
 
 #### **propsGridColumn**
 
-*Supported by `WaterfallGrid` and `WaterfallGridAnimated`*
+*Supported by `WaterfallGrid`*
 
-Props to pass to each grid column - flexbox `div` for non-animated Grid containers and flexbox `motion.div` for animated ones.
+Props to pass to each grid column (flexbox `div`).
 
 #### **propsGridRow**
 
-*Supported by `WaterfallHorizontalGrid` and `WaterfallHorizontalGridAnimated`*
+*Supported by `WaterfallHorizontalGrid`*
 
-Props to pass to each grid column - flexbox `div` for non-animated Grid containers and flexbox `motion.div` for animated ones.
-
-#### **propsAnimatePresence**
-
-*Supported by `WaterfallGridAnimated` and `WaterfallHorizontalGridAnimated`*
-
-Props to pass to the `<AnimatePresence>` container which encapsulates the actual grid container.
+Props to pass to each grid column (flexbox `div`).
 
 ### FAQ 🤔
 
@@ -162,6 +154,10 @@ Props to pass to the `<AnimatePresence>` container which encapsulates the actual
 
     *That is because the grid **does not judge and reshape itself based on the child heights (for vertical grids) or widths (for horizontal grids).** It rather checks the total number of elements and the parent element dimensions to judge how many elements can be fitted per column/row. **If it so happens that a few of the child elements are much larger than all remaining child elements, you'll see this happening.**
     I'll be working on it soon, I have some ideas.*
+
+- **What happened to the Animated grids?**
+
+    *Well, I found out that you do not need motion divs (from Framer Motion) to allow animated child components inside, and to allow animated layout changes. So, I did away with it. This reduced the peer dependencies as well, allowing projects to use `react-waterfall-grid` without adding framer-motion even if they do not have any animated components.*
     
 - **I found an issue/bug, where do I tell you about it?**
 
