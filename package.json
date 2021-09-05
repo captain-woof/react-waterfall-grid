@@ -1,6 +1,6 @@
 {
   "name": "react-waterfall-grid",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "React Waterfall Grid is a library of fully responsive, animated and customizable waterfall grids (vertical and horizontal). All it needs is an array of your elements, and it handles the rest out-of-the-box.",
   "author": "captain-woof",
   "license": "MIT",
