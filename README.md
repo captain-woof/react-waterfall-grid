@@ -80,7 +80,7 @@ export default function App() {
 
 With `react-waterfall-grid`, you get access to two different grid containers - 
 - **`WaterfallGrid`**
-- **`WaterfallHorizontalGrid`
+- **`WaterfallHorizontalGrid`**
 
 As you might have guessed, `WaterfallGrid` is named so because the child contents *fall vertically*, while in `WaterfallHorizontalGrid` the child contents *'fall' horizontally.*
 
