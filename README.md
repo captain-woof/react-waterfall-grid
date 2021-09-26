@@ -167,6 +167,10 @@ Props to pass to each grid column (flexbox `div`).
 
     *Why not? **This package is MIT licensed**. Do anything you wish to with it, with one condition that you come back and tell me about it.*
     
-### Author 👊
+### Author
 
-MIT © [Sohail Saha *(aka Captain Woof)*](https://sohail-saha.in/)
+**[Sohail Saha (aka CaptainWoof)](https://sohail-saha.in)**
+
+[![Buy me a coffee](https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=captainwoof&button_colour=FFDD00&font_colour=000000&font_family=Lato&outline_colour=000000&coffee_colour=ffffff)](https://www.buymeacoffee.com/captainwoof)
+
+*Please consider supporting me if you find this package useful in your work.*
