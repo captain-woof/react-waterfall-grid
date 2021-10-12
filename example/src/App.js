@@ -149,8 +149,10 @@ export default function App() {
 
   return (
     <ParentContainer id="parent-container">
-      <WaterfallGrid childItems={imagesList} childWidth={isPhone ? 200 : 300}
-        styleGridContainer={{ width: "100%", position: "relative", justifyContent: "center", zIndex: 1 }} />
+      <WaterfallGrid childWidth={isPhone ? 200 : 300}
+        styleGridContainer={{ width: "100%", position: "relative", justifyContent: "center", zIndex: 1 }} >
+        {imagesList}
+      </WaterfallGrid>
       <OverlayAndTitleContainer>
         <Title id="title" variants={titleContainerVariant} initial="initial" animate="animate" exit="exit">
           {"react-waterfall-grid".split("").map((character, index) => (

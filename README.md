@@ -69,7 +69,7 @@ export default function App() {
 
   return (
     <ParentContainer id="parent-container">
-      <WaterfallGrid childItems={imagesList} childWidth={isPhone ? 200 : 300}
+      <WaterfallGrid children={imagesList} childWidth={isPhone ? 200 : 300}
         styleGridContainer={{ width: "100%", position: "relative", justifyContent: "center", zIndex: 1 }}/>
     </ParentContainer>
   );
@@ -91,6 +91,14 @@ Based on this, **there are different props, some common to both Grids, and the r
 Lastly, **`react-waterfall-grid` uses flexbox at its core**, so to customize styles for the grid container as a whole or the grid columns (or rows, for horizontal grids), **pass in the style with the appropriate prop just like you would for a native flexbox container.**
 
 ### Props 😏
+
+#### **children**
+
+*Supported by both grids*
+
+A one-directional array of containing all child elements. Make sure to give them unique keys. Any customization you want on the child must be done by you, the grid won't handle that, allowing full control on each child element as well.
+
+`children` can be a state as well, and updating this state will cause the Grid to re-render appropriately on its own, meaning, that you do not need to take care of the re-rendering yourself!
 
 #### **styleGridContainer**
 
@@ -121,14 +129,6 @@ The width of each child element in the grid. **Must be a number** (would be used
 *Supported by `WaterfallHorizontalGrid`*
 
 The height of each child element in the grid. **Must be a number** (would be used as pixels); *cannot be a string*. **This will remain constant.** The width is freely allowed to change.
-
-#### **childItems**
-
-*Supported by both grids*
-
-A one-directional array of containing all child elements. Make sure to give them unique keys. Any customization you want on the child must be done by you, the grid won't handle that, allowing full control on each child element as well.
-
-`childItems` can be a state as well, and updating this state will cause the Grid to re-render appropriately on its own, meaning, that you do not need to take care of the re-rendering yourself!
 
 #### **propsGridContainer**
 
