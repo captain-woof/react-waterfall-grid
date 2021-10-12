@@ -26,7 +26,7 @@ const fillupRowContainers = (childItemArr, styleGridRow, propsGridRow, setRowCon
 }
 
 export default function WaterfallHorizontalGrid({ styleGridContainer, styleGridRow,
-  childHeight, childItems, propsGridContainer, propsGridRow }) {
+  childHeight, children, propsGridContainer, propsGridRow }) {
   // `childItems` is an array of elements to render, each having width `childWidth`
   const childItemArr = useMemo(() => (
     new ReshapeMatrix(undefined, 0)
@@ -34,9 +34,9 @@ export default function WaterfallHorizontalGrid({ styleGridContainer, styleGridR
 
   // When 'childItems' changes, render whole grid
   useEffect(() => {
-    childItemArr.replaceAllByElems(childItems)
+    childItemArr.replaceAllByElems(children)
     fillupColumnContainers(childItemArr, styleGridRow, propsGridRow, setRowContainersArr)
-  }, [childItems, childItemArr, styleGridRow, propsGridRow])
+  }, [children, childItemArr, styleGridRow, propsGridRow])
 
   // State for grid contents (row containers)
   const [rowContainersArr, setRowContainersArr] = useState([])
